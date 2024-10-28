@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="image/pngtree-store.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amira Ghazi">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Store Management System</title>
+</head>
+<body>
+      <div class="container w-75 mt-5 ">
+      <div class="form-floating mb-3">
+        <input  oninput="validationproduct(this)"
+          type="text" class="form-control" id="productName" placeholder="product Name">
+        <div class="alert alert-danger d-none" role="alert">
+          A simple danger alert—check it out!
+        </div>
+        <label for="floatingInput">product Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input oninput="validationproduct(this)"
+          type="text" class="form-control" id="productPrice" placeholder="product Price">
+        <div class="alert alert-danger d-none" role="alert">
+          A simple danger alert—check it out!
+        </div>
+        <label for="productPrice">product Price</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input oninput="validationproduct(this)"
+          list="Category"  type="text"  class="form-control" id="productCategory" placeholder="product Category">
+        <datalist id="Category">
+            <option value="tv">tv</option>
+            <option value="mobil">mobil</option>
+            <option value="laptop">laptop</option>
+            <option value="nokia">nokia</option>
+        </datalist>
+        <label for="productCategory">product Category</label>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea oninput="validationproduct(this)" type="text"  class="form-control"  id="productDes" placeholder="product Description"></textarea>
+        <label for="productDes">product  Description</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="file" accept="image/*"  class="form-control"  id="productimg"  placeholder="image">
+        <label for="productimg">image</label>
+      </div>
+
+      <button id="addNew" onclick="addproduct();" class="btn btn-info " >add product</button>
+      <button id="upNew"  onclick=" updateinfo();" class="btn  bg-warning px-2 d-none">up Data</button>
+    
+    </div>
+
+
+
+<div class="container mt-2 gap-5">
+    <input oninput="searchProduct();" type="text" class="form-control w-50 mx-auto" id="productsearch" placeholder="Search By Name">
+    <div class="row py-5 gy-3" id="rowData"> </div>
+</div>
+
+
+    <script src="js/particles.json"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
